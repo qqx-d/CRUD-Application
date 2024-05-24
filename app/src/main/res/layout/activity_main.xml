@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/add_note"
+        android:layout_width="124dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/nerko_one"
+        android:text="Add Note"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/to_trashcan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+
+    <Button
+        android:id="@+id/to_trashcan"
+        android:layout_width="56dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/delete_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_note"
+        app:layout_constraintTop_toTopOf="@+id/add_note"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/note_holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/note_view_border"
+        app:layout_constraintBottom_toTopOf="@+id/search_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note_label" />
+
+    <TextView
+        android:id="@+id/note_label"
+        android:layout_width="154dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/nerko_one"
+        android:text="Notes"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/note_holder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="287dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/note_item_border"
+        android:fontFamily="@font/nerko_one"
+        android:gravity="center"
+        android:hint="Enter a title to search"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/add_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note_holder" />
+
+    <TextView
+        android:id="@+id/clear_search_bar"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/note_item_border"
+        android:fontFamily="@font/nerko_one"
+        android:gravity="center|right"
+        android:text="X"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/search_bar"
+        app:layout_constraintEnd_toEndOf="@+id/search_bar"
+        app:layout_constraintStart_toStartOf="@+id/search_bar"
+        app:layout_constraintTop_toTopOf="@+id/search_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

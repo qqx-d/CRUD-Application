@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/tittle_text"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:autofillHints=""
+        android:background="@drawable/note_view_border"
+        android:fontFamily="@font/nerko_one"
+        android:hint=" Enter the tittle"
+        android:paddingLeft="10dp"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/content_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/content_text"
+        android:layout_width="314dp"
+        android:layout_height="532dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:autofillHints=""
+        android:background="@drawable/note_view_border"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:fontFamily="@font/nerko_one"
+        android:gravity="start|top"
+        android:hint="Enter the content"
+        android:inputType="textMultiLine"
+        android:lineSpacingExtra="4sp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tittle_text"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/exit_note"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/nerko_one"
+        android:text="Exit"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/save_note" />
+
+    <Button
+        android:id="@+id/save_note"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/nerko_one"
+        android:text="Save"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/exit_note"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
